@@ -1,10 +1,8 @@
 # Statistical Machine Learning
 
-If you have any problem or find some errors in the notebooks/homeworks please contact me at: **ginevra.carbone@phd.units.it**
+Please use the **dedicated forum on moodle** for questions on theory and exercises.
 
-## News
-
-- uploaded `homework_02`
+If you notice some errors in the notebooks/homeworks contact me at: **ginevra.carbone@phd.units.it**
 
 ## Useful links
 
@@ -19,26 +17,29 @@ If you have any problem or find some errors in the notebooks/homeworks please co
 
 Download, clone or fork (your choice) this repository in a directory `PATH_TO_DIR/`.
 
-Create a virtual environment using `python3`
+Create a virtual environment using `python3` (commands are provided for *Debian-like* GNU/Linux distributions)
 ```
 cd PATH_TO_DIR/statistical-machine-learning/
 sudo apt-get install python3-pip
-pip3 install virtualenv
-virtualenv -p /usr/bin/python3 venv
+python3 -m pip install --user virtualenv
+python3 -m virtualenv -p "$(which python3)" venv
 ```
 
 Now you should see `PATH_TO_DIR/statistical-machine-learning/venv/` folder.
 Activate the enviroment and install the requirements:
 ```
 source venv/bin/activate
-pip3 install -r requirements.txt 
+python3 -m pip install -r ./requirements.txt 
+```
+
+Register the just-installed virtual environment for use with Jupyter:
+```
+python3 -m ipykernel install --user --name statistical-machine-learning --display-name "Python (SML virtualenv)"
 ```
 
 Open your notebooks using jupyter-notebook (or jupyter-lab):
 ```
-python3 -m notebook
+python3 -m jupyter notebook
 ```
 
-To deactivate the environment use `deactivate` command.
-
-
+To deactivate the environment use `source deactivate` command.
